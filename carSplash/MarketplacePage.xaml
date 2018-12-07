@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="carSplash.MarketplacePage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Button x:Name="RefrBtn" Image="refresh.png" BackgroundColor="PowderBlue" Clicked="RefrBtn_clicked"  CornerRadius="40" Scale="0.5"  />
+            
+
+
+            
+            <!--Market section-->
+            <StackLayout Orientation="Vertical">
+                
+                <ListView  x:Name="MarketView" 
+                            RowHeight="110"
+                           >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    
+                                    <MenuItem
+                                        Text="Accept"
+                                        Clicked="Handle_AcceptButton"
+                                        CommandParameter="{Binding .}" 
+                                        IsDestructive="True" />     
+                                </ViewCell.ContextActions>
+                                <StackLayout Orientation="Vertical" Padding="20,10,20,10">
+                                    
+                            
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Image Source="vehicleinfo.png" WidthRequest="20" HeightRequest="20" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25"/>
+                                        <Label Text="{Binding VehicleInfo}" FontSize="10" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                        <Image Source="pay.png" WidthRequest="20" HeightRequest="20" AbsoluteLayout.LayoutBounds="50, 35, 200, 50"/>
+                                        <Label Text="{Binding Package}" FontSize="10" AbsoluteLayout.LayoutBounds="50, 35, 200, 50">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </StackLayout>
+
+                                    
+
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Image Source="date.png" WidthRequest="20" HeightRequest="20" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25"/>
+                                        <Label Text="{Binding Date}" FontSize="10" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                        <Image Source="location.png" WidthRequest="20" HeightRequest="20" AbsoluteLayout.LayoutBounds="50, 35, 200, 50"/>
+                                        <Label Text="{Binding Addr}" FontSize="10" AbsoluteLayout.LayoutBounds="50, 35, 200, 50">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text = "Posted by" FontSize="12" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                        <Label Text = "{Binding Client}" FontSize="12" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                        <Label Text = "{Binding RateClient, StringFormat = '{0:F1}'}" FontSize="12" AbsoluteLayout.LayoutBounds="50, 35, 200, 50">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                        <Label Text = "stars" FontSize="10" AbsoluteLayout.LayoutBounds="50, 35, 200, 50">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </StackLayout>
+
+                                </StackLayout>
+                                
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <!-- end Market section-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

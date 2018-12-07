@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+             x:Class="carSplash.NewPost">
+
+    <ContentPage.Content>
+
+        <StackLayout Padding="30, 20, 30, 20" Spacing="-8" >
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Vehicle Make" HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <Label.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+
+                            <On Platform="iOS">PatuaOne</On>
+
+                        </OnPlatform>
+
+                    </Label.FontFamily>
+
+                </Label>
+
+                <Entry x:Name="MakeEntry" FontSize="11" Placeholder="e.g Dodge" HorizontalOptions="FillAndExpand">
+
+                    <Entry.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">BadScript-Regular.ttf#BSr</On>
+
+                            <On Platform="iOS">BSr</On>
+
+                        </OnPlatform>
+
+                    </Entry.FontFamily>
+
+                </Entry>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Model" HorizontalOptions="Center" VerticalOptions="Center" >
+
+                    <Label.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+
+                            <On Platform="iOS">PatuaOne</On>
+
+                        </OnPlatform>
+
+                    </Label.FontFamily>
+
+                </Label>
+
+                <Entry x:Name="ModelEntry" FontSize="11" Placeholder="e.g Challenger" HorizontalOptions="FillAndExpand">
+
+                    <Entry.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">BadScript-Regular.ttf#BSr</On>
+
+                            <On Platform="iOS">BSr</On>
+
+                        </OnPlatform>
+
+                    </Entry.FontFamily>
+
+                </Entry>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Color" HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <Label.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+
+                            <On Platform="iOS">PatuaOne</On>
+
+                        </OnPlatform>
+
+                    </Label.FontFamily>
+
+                </Label>
+
+                <Entry x:Name="ColorEntry" FontSize="11" Placeholder="e.g Black" HorizontalOptions="FillAndExpand">
+
+                    <Entry.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">BadScript-Regular.ttf#BSr</On>
+
+                            <On Platform="iOS">BSr</On>
+
+                        </OnPlatform>
+
+                    </Entry.FontFamily>
+
+                </Entry>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Wash level" HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <Label.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+
+                            <On Platform="iOS">PatuaOne</On>
+
+                        </OnPlatform>
+
+                    </Label.FontFamily>
+
+                </Label>
+
+                <Picker x:Name="picker" FontSize="12" Title="Select a package">
+
+                    <Picker.ItemsSource>
+
+                        <x:Array Type="{x:Type x:String}">
+
+                            <x:String>Basic $15</x:String>
+
+                            <x:String>FirstClass $30</x:String>
+
+                            <x:String>Luxury $50</x:String>
+
+                        </x:Array>
+
+                    </Picker.ItemsSource>
+
+                    <Picker.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">BadScript-Regular.ttf#BSr</On>
+
+                            <On Platform="iOS">BSr</On>
+
+                        </OnPlatform>
+
+                    </Picker.FontFamily>
+
+                </Picker>
+
+            </StackLayout>
+
+
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Date" HorizontalOptions="Center" VerticalOptions="Center" >
+
+                    <Label.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+
+                            <On Platform="iOS">PatuaOne</On>
+
+                        </OnPlatform>
+
+                    </Label.FontFamily>
+
+                </Label>
+
+                <DatePicker x:Name="myDatePicker" FontSize="12" MaximumDate="1/15/2019" >
+
+                    <DatePicker.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">BadScript-Regular.ttf#BSr</On>
+
+                            <On Platform="iOS">BSr</On>
+
+                        </OnPlatform>
+
+                    </DatePicker.FontFamily>
+
+                </DatePicker>
+
+            </StackLayout>
+
+
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Address" HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <Label.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+
+                            <On Platform="iOS">PatuaOne</On>
+
+                        </OnPlatform>
+
+                    </Label.FontFamily>
+
+                </Label>
+
+                <Entry x:Name="AddrEntry" FontSize="11" Placeholder="e.g 123, Mission Rd" HorizontalOptions="FillAndExpand">
+
+                    <Entry.FontFamily>
+
+                        <OnPlatform x:TypeArguments="x:String">
+
+                            <On Platform="Android">BadScript-Regular.ttf#BSr</On>
+
+                            <On Platform="iOS">BSr</On>
+
+                        </OnPlatform>
+
+                    </Entry.FontFamily>
+
+                </Entry>
+
+            </StackLayout>
+
+
+
+            <!--submitclicked function needed-->
+
+            <Button x:Name="SubmitBtn" Clicked="SubmitBtn_clicked" Text="Post It!"  FontSize="24" Scale="0.8" CornerRadius="20"
+
+                    HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="PowderBlue">
+
+                <Button.FontFamily>
+
+                    <OnPlatform x:TypeArguments="x:String">
+
+                        <On Platform="Android">PermanentMarker-Regular.ttf#PMr</On>
+
+                        <On Platform="iOS">PermanentMarker</On>
+
+                    </OnPlatform>
+
+                </Button.FontFamily>
+
+            </Button>
+
+            <Button x:Name="CancelBtn" Clicked="CancelBtn_clicked" Text="Cancel"  FontSize="24" Scale="0.8" CornerRadius="20"
+
+                    HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Red">
+
+                <Button.FontFamily>
+
+                    <OnPlatform x:TypeArguments="x:String">
+
+                        <On Platform="Android">PermanentMarker-Regular.ttf#PMr</On>
+
+                        <On Platform="iOS">PermanentMarker</On>
+
+                    </OnPlatform>
+
+                </Button.FontFamily>
+
+            </Button>
+
+            <ActivityIndicator
+
+                       HorizontalOptions="CenterAndExpand"
+
+                       VerticalOptions="CenterAndExpand"
+
+                       IsVisible="False"
+
+                       IsEnabled="True"
+
+                       x:Name="syncIndicator"/>
+
+
+
+
+
+        </StackLayout>
+
+
+
+    </ContentPage.Content>
+
+</ContentPage>

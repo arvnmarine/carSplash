@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.xamarin.sample.carSplash">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="15" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <application android:label="carSplash" android:icon="@drawable/icon" android:name="android.app.Application" android:allowBackup="true" android:debuggable="true">
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="carSplash.Droid" android:theme="@android:style/Theme.Holo.Light" android:name="md5d011a756ab252fef729b0a9d4036cf4d.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorActivity" />
+    <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:name="md5ff7ab77db4f245bffa5244a84a5a1bca.WebAuthenticatorNativeBrowserActivity" />
+    <activity android:name="com.microsoft.windowsazure.mobileservices.authentication.RedirectUrlActivity" />
+    <receiver android:enabled="true" android:exported="false" android:label="Connectivity Plugin Broadcast Receiver" android:name="md5be200de48c54a25f3fb4652989ad086d.ConnectivityChangeBroadcastReceiver" />
+    <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
+    <receiver android:enabled="true" android:exported="false" android:name="md5b60ffeb829f638581ab2bb9b1a7f4f3f.PowerSaveModeBroadcastReceiver" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.xamarin.sample.carSplash.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.xamarin.sample.carSplash" />
+      </intent-filter>
+    </receiver>
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+  </application>
+</manifest>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="carSplash.AuthPage">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Image Source="carwashlogo.PNG" HeightRequest="80" WidthRequest="100"/>
+            <Label Text="SPLASH" TextColor="CornflowerBlue" FontSize="28" HorizontalOptions="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android">PermanentMarker-Regular.ttf#PMr</On>
+                        <On Platform="iOS">PermanentMarker</On>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <ActivityIndicator Grid.RowSpan="2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="False"
+                       IsEnabled="True"
+                       x:Name="syncIndicator"/>
+            <Label Text="Mobile Wash Service" TextColor="CadetBlue" FontSize="12" HorizontalOptions="Center">
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                        <On Platform="iOS">PatuaOne</On>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+
+            <StackLayout Spacing="-12">
+                <!--Entry:Username,pw button:login-->
+                <Entry x:Name="usernameEntry" Placeholder="Username" FontFamily="default" FontSize="14" TextColor="Gray" Scale="0.6" HorizontalOptions="FillAndExpand" />
+                <Entry x:Name="pwEntry" Placeholder="Password" FontFamily="default" FontSize="14" TextColor="Gray" Scale="0.6" HorizontalOptions="FillAndExpand" IsPassword="true"/>
+
+                <Button x:Name="LogInBtn" Text="Member log in"  FontSize="16" HorizontalOptions="CenterAndExpand" 
+                    BackgroundColor="SteelBlue" TextColor="White" CornerRadius="20" Scale="0.6" Clicked="LogInBtn_Clicked">
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                            <On Platform="iOS">PatuaOne</On>
+                        </OnPlatform>
+                    </Button.FontFamily>
+                </Button>
+                <!--login button click go to containerpage-->
+
+            </StackLayout>
+
+            <StackLayout Spacing="-12">
+                <Entry x:Name="rpwEntry" Placeholder="Re-type password to sign up" FontFamily="default" FontSize="14" TextColor="LightGray" Scale="0.6" IsPassword="true"/>
+                <Button x:Name="RegisterBtn" Clicked="RegisterBtn_Clicked"  Text="Sign Up" FontSize="16" HorizontalOptions="CenterAndExpand" 
+                        BackgroundColor="MidnightBlue" TextColor="White" CornerRadius="20" Scale="0.6">
+                    <Button.FontFamily>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                            <On Platform="iOS">PatuaOne</On>
+                        </OnPlatform>
+                    </Button.FontFamily>
+                </Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

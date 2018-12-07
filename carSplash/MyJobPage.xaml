@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="carSplash.MyJobPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Button x:Name="RefrBtn" Image="refresh.png"  Clicked="RefrBtn_clicked" BackgroundColor="PowderBlue" CornerRadius="40" Scale="0.5" />
+
+
+
+
+            <!--Market section-->
+            <StackLayout Orientation="Vertical">
+
+                <ListView  x:Name="MarketView" 
+                            RowHeight="65"
+                           >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem
+                                        Text="Finish Job"
+                                        Clicked="Handle_FinishButton"
+                                        CommandParameter="{Binding .}" 
+                                        IsDestructive="True" />
+                                    <MenuItem
+                                        Text="Cancel Job"
+                                        Clicked="Handle_CancelButton"
+                                        CommandParameter="{Binding .}" 
+                                        IsDestructive="True" />
+                                </ViewCell.ContextActions>
+                                <StackLayout Orientation="Vertical" Padding="20,10,20,10">
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Image Source="vehicleinfo.png" WidthRequest="20" HeightRequest="20" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25"/>
+                                        <Label Text="{Binding VehicleInfo}" FontSize="10" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                        <Image Source="pay.png" WidthRequest="20" HeightRequest="20" AbsoluteLayout.LayoutBounds="50, 35, 200, 50"/>
+                                        <Label Text="{Binding Package}" FontSize="10" AbsoluteLayout.LayoutBounds="50, 35, 200, 50">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </StackLayout>
+
+
+
+                                    <StackLayout Orientation="Horizontal" Spacing="5">
+                                        <Image Source="date.png" WidthRequest="20" HeightRequest="20" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25"/>
+                                        <Label Text="{Binding Date}" FontSize="10" AbsoluteLayout.LayoutBounds="0.25, 0.25, 400, 25">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                        <Image Source="location.png" WidthRequest="20" HeightRequest="20" AbsoluteLayout.LayoutBounds="50, 35, 200, 50"/>
+                                        <Label Text="{Binding Addr}" FontSize="10" AbsoluteLayout.LayoutBounds="50, 35, 200, 50">
+                                            <Label.FontFamily>
+                                                <OnPlatform x:TypeArguments="x:String">
+                                                    <On Platform="Android">PatuaOne-Regular.ttf#POr</On>
+                                                    <On Platform="iOS">PatuaOne</On>
+                                                </OnPlatform>
+                                            </Label.FontFamily>
+                                        </Label>
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <!-- end Market section-->
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

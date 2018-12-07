@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="carSplash.PersonalPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+
+            <!--profile section-->
+            <StackLayout>
+                <Image Source="profile.png" WidthRequest="75" HeightRequest="75" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                    <Label x:Name="usernameLbl" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+                </StackLayout>
+            </StackLayout>
+            <!--end profile section-->
+
+
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="ClientRateCountLbl"  VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand"/>
+                <Label Text="client ratings"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="ClientRateLbl"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                <Label Text="/5 stars"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="ServiceRateCountLbl"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="service ratings"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="ServiceRateLbl"  VerticalOptions="CenterAndExpand"  FontSize="16" HorizontalOptions="CenterAndExpand"/>
+                <Label Text="/5 stars"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+
+            
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
